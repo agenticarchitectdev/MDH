@@ -1,0 +1,137 @@
+# Full Page Background HTML for Mega Dream Homes
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mega Dream Homes</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+
+      /* Replace with your image path */
+      background-image: url('./a_wide_bright_promotional_collage_scene_of_a_resi.png');
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Dark overlay for better text visibility */
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(1px);
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .content h1 {
+      font-size: 5rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .content p {
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .cta-button {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 14px 32px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 2px solid white;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .cta-button:hover {
+      background: white;
+      color: #1f3d1f;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .content h1 {
+        font-size: 2.8rem;
+      }
+
+      .content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero-section">
+    <div class="content">
+      <h1>Mega Dream Homes</h1>
+      <p>Green Living • Premium Lifestyle • Bareilly</p>
+
+      <a href="#" class="cta-button">
+        Explore Community
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>
+```
+
+## Notes
+
+* Put the generated collage image in the same folder as your HTML file.
+* If your image is inside an `images` folder, use:
+
+```css
+background-image: url('./images/a_wide_bright_promotional_collage_scene_of_a_resi.png');
+```
+
+* For React/Vite projects:
+
+```jsx
+style={{
+  backgroundImage: `url('/a_wide_bright_promotional_collage_scene_of_a_resi.png')`
+}}
+```
